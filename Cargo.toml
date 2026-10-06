@@ -1,1 +1,11 @@
+[package]
+name = "yomu_universal_catalog"
+version = "0.1.0"
+edition = "2021"
+publish = false
 
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+aidoku = { git = "https://github.com/Aidoku/aidoku-rs.git" }
