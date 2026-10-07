@@ -1,0 +1,35 @@
+{
+  "info": {
+    "id": "multi.yomu_universal_catalog",
+    "lang": "multi",
+    "name": "Yomu Universal Catalog",
+    "version": 1,
+    "url": "https://github.com/Weslei-cripto/yomu-universal-catalog",
+    "urls": [
+      "https://github.com/Weslei-cripto/yomu-universal-catalog"
+    ],
+    "nsfw": 1
+  },
+  "languages": [
+    { "code": "pt-br" },
+    { "code": "pt" },
+    { "code": "en" },
+    { "code": "es" },
+    { "code": "it" },
+    { "code": "fr" },
+    { "code": "de" },
+    { "code": "ja" },
+    { "code": "zh" },
+    { "code": "ko" }
+  ],
+  "listings": [
+    { "name": "Manga" },
+    { "name": "Manhwa" },
+    { "name": "Manhua" },
+    { "name": "Webtoon" },
+    { "name": "Italiano" },
+    { "name": "Adulto / Sugestivo" },
+    { "name": "Explícito — Japonês" },
+    { "name": "Explícito — Internacional" }
+  ]
+}
