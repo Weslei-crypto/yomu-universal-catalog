@@ -1,0 +1,35 @@
+name: Build Aidoku Source
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Install Aidoku CLI
+        run: |
+          cargo install --git https://github.com/Aidoku/aidoku-rs aidoku-cli
+
+      - name: Build source
+        working-directory: src/rust/multi.yomu_universal_catalog
+        run: |
+          aidoku package .
+
+      - name: Upload AIX
+        uses: actions/upload-artifact@v4
+        with:
+          name: yomu-universal-catalog
+          path: src/rust/multi.yomu_universal_catalog/*.aix
